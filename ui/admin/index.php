@@ -9,19 +9,24 @@
 <head>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
-	<title>Sisteme Ventas</title>
+	<title>CAISE</title>
 </head>
 <body>
 	<header>
 		<div class="header">
 			
-			<h1>Sistema Facturación</h1>
+			<h1>CONSULTORIA AMBIENTAL CAISE</h1>
 			<div class="optionsBar">
-				<p>Guatemala, 20 noviembre de 2017</p>
+				<p>
+					<?php 
+						date_default_timezone_set('America/Mexico_City');
+						echo date('d/M/Y h:i a', time());
+					?>
+				</p>
 				<span>|</span>
 				<span class="user">Julio Estrada</span>
-				<img class="photouser" src="img/user.png" alt="Usuario">
-				<a href="../salir.php"><img class="close" src="img/salir.png" alt="Salir del sistema" title="Salir"></a>
+				<img class="photouser" src="../images/icons/user.png" alt="Usuario">
+				<a href="../salir.php"><img class="close" src="../images/icons/salir.png" alt="Salir del sistema" title="Salir"></a>
 			</div>
 		</div>
 		<nav>
@@ -66,7 +71,7 @@
 		</nav>
 	</header>
 	<section id="container">
-		<h1>Bienvenido al sistema</h1>
+		<h1>Bienvenido</h1>
 	</section>
 </body>
 </html>

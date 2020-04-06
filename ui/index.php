@@ -1,9 +1,8 @@
 <?php
-    include "../include/conexion.php";
     $alert = "";
     session_start();
     if(!empty($_SESSION['active'])){
-
+        header('Location: admin/'); 
     }else {
         if(!empty($_POST)){
             if(empty($_POST['usuario']) || empty($_POST['clave'])){
@@ -25,11 +24,7 @@
                     $_SESSION['correo'] = $datos['correo'];
                     $_SESSION['Password'] = $datos['Password'];
                     $_SESSION['rol'] = $datos['rol'];
-                    if($datos['rol'] == 2){
-                        header('Location: user/');
-                    }else{
-                        header('Location: admin/'); 
-                    }
+                    header('Location: admin/'); 
                 } else{
                     $alert = "Datos incorrectos";
                     session_destroy();
